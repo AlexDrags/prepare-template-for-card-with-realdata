@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            /* flex-direction: column; */
+            /* justify-content: center; */
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .products__swiper-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            display: grid;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid gray;
+            text-align: center;
+        }
+        .tab {
+            width: 100%;
+        }
+        img {
+            justify-self: center;
+        }
+
+        h1 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section class="products" id="abonnement">
+        <div class="products__container container">
+            <h1 class="visually-hidden">Каталог</h1>
+            <div class="tab">
+                <button class="tablinks active" id="defaultOpen">Популярные товары</button>
+                <button class="tablinks">Недавно купили</button>
+                <button class="tablinks">Вас&nbsp;может&nbsp;заинтересовать</button>
+            </div>
+    
+            <div id="popular" class="tabcontent">
+                <div class="products__swiper swiper">
+                <div class="products__swiper-wrapper swiper-wrapper">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <template id="card">
+
+        <div class="products__swiper-slide swiper-slide">
+            <div class="products__card card">
+
+                <div class="card__swiper swiper">
+                    <div class="card__swiper-wrapper swiper-wrapper">                        
+
+                    </div>
+                    <div class="card__swiper-pagination swiper-pagination"></div>
+                </div>
+
+                <h3 class="card__title"></h3>
+                <div>
+                <span></span>
+                </div>
+                <div class="card__byu-element">
+                    <p class="card__byu-info">
+                        <button class="card__button-minus" type="button">-</button>
+                        <input class="card__quantity" type="number" name="number" value="1" min="1" max="10">
+                        <button class="card__button-incr" type="button">+</button>
+                    </p>
+                    <button class="card__button" type="button">
+                        <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                        </svg>
+                        В корзину
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        
+    </template>
+
+    <template id="imgCard">
+
+        <div class="card__swiper-slide swiper-slide">
+            <p class="card__set">
+                <a href="/">
+                <svg width="34" height="34">
+                    <use xlink:href="img/sprite.svg#faivorite"></use>
+                </svg>
+                </a>
+                <a href="/">
+                <svg width="34" height="34">
+                    <use xlink:href="img/sprite.svg#compare"></use>
+                </svg>
+                </a>
+            </p>
+            <img width="334" height="334"  src="" alt="">
+        </div>
+
+    </template>
+
+    <script src="./index.js"></script>
+</body>
+</html>
